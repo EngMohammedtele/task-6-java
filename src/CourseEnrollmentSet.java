@@ -51,7 +51,7 @@ public class CourseEnrollmentSet {
         // Store the removal result.
         String removalResult;
 
-        // Check whether this condition is true.
+        // Remove the course and check if it was found.
         if (courses.remove(courseToRemove)) {
             // Set the removal result value.
             removalResult = "Course removed successfully.";
