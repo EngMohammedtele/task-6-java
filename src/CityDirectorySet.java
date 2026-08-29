@@ -17,7 +17,7 @@ public class CityDirectorySet {
         // Clear the remaining new line from the input.
         scanner.nextLine();
 
-        // Check whether this condition is true.
+        // Check if the searched city exists in the set.
         if (numberOfCities <= 0) {
             // Display information to the user.
             System.out.println("Invalid number of cities.");
