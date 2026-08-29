@@ -11,7 +11,7 @@ public class CourseEnrollmentSystem {
         Scanner scanner = new Scanner(System.in);
         // Create a HashSet to store unique student ids.
         HashSet<Integer> studentIds = new HashSet<>();
-        // Create a HashMap to store enrollments as key and value pairs.
+        // Map each student ID to the student's course.
         HashMap<Integer, String> enrollments = new HashMap<>();
 
         // Read the number of students
