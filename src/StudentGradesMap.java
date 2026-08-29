@@ -80,7 +80,7 @@ public class StudentGradesMap {
             totalGrades += grade;
         }
 
-        // Store the average grade.
+        // Use zero when empty or calculate the average grade.
         double averageGrade = grades.isEmpty()
                 ? 0
                 : totalGrades / grades.size();
