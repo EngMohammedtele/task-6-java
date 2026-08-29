@@ -7,7 +7,7 @@ public class ProductInventorySet {
     public static void main(String[] args) {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
-        // Create a HashSet to store unique products.
+        // Store each product once in a HashSet.
         HashSet<String> products = new HashSet<>();
 
         // Read the number of products
