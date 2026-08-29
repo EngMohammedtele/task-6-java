@@ -51,7 +51,7 @@ public class CityDirectorySet {
         // Store the search result.
         String searchResult;
 
-        // Check whether this condition is true.
+        // Check if the searched city exists in the set.
         if (cities.contains(searchCity)) {
             // Set the search result value.
             searchResult = "City found in the directory.";
