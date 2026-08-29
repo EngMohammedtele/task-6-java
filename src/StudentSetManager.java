@@ -35,7 +35,7 @@ public class StudentSetManager {
                 // Read the student id from the user.
                 int studentId = input.nextInt();
 
-                // Try to add ID to HashSet
+                // Add the ID and remember if it was new.
                 boolean added = studentIds.add(studentId);
 
                 // Display message if duplicate
