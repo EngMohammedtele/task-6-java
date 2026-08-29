@@ -229,7 +229,7 @@ public class EmployeeSalaryManager {
                         totalPayroll += salary;
                     }
 
-                    // Calculate and store the average salary.
+                    // Divide the total payroll by the number of employees.
                     double averageSalary = totalPayroll / salaries.size();
 
                     // Display information to the user.
