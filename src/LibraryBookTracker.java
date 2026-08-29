@@ -11,7 +11,7 @@ public class LibraryBookTracker {
         Scanner scanner = new Scanner(System.in);
         // Create a HashSet to store unique book ids.
         HashSet<Integer> bookIds = new HashSet<>();
-        // Create a HashMap to store books as key and value pairs.
+        // Map each book ID to its book title.
         HashMap<Integer, String> books = new HashMap<>();
 
         // Read the number of books
