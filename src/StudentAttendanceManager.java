@@ -8,7 +8,7 @@ public class StudentAttendanceManager {
     public static void main(String[] args) {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
-        // Create a HashMap to store attendance as key and value pairs.
+        // Map each student ID to the number of attended days.
         HashMap<Integer, Integer> attendance = new HashMap<>();
 
         // Read the initial number of students
