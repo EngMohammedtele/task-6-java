@@ -12,7 +12,7 @@ class UniversityCourseRegistrationSystem {
         Scanner scanner = new Scanner(System.in);
         // Create a HashSet to store unique student ids.
         HashSet<Integer> studentIds = new HashSet<>();
-        // Create a HashMap to store registrations as key and value pairs.
+        // Map each student ID to a set of registered courses.
         HashMap<Integer, HashSet<String>> registrations = new HashMap<>();
 
         // Read the initial number of students
