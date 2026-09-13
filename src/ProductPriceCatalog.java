@@ -9,7 +9,7 @@ public class ProductPriceCatalog {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
         // Map each product name to its price.
-        HashMap<String, Double> products = new HashMap<>();
+        Map<String, Double> products = new HashMap<>();
 
         // Read the number of products
         System.out.print("Enter the number of products: ");

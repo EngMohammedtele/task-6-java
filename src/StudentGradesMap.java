@@ -9,7 +9,7 @@ public class StudentGradesMap {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
         // Create a HashMap to store grades as key and value pairs.
-        HashMap<Integer, Double> grades = new HashMap<>();
+        Map<Integer, Double> grades = new HashMap<>();
 
         // Read the number of students
         System.out.print("Enter the number of students: ");

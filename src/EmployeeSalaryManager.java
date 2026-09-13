@@ -9,7 +9,7 @@ public class EmployeeSalaryManager {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
         // Create a HashMap to store salaries as key and value pairs.
-        HashMap<Integer, Double> salaries = new HashMap<>();
+        Map<Integer, Double> salaries = new HashMap<>();
 
         // Read the initial number of employees
         System.out.print("Enter the number of employees: ");

@@ -9,7 +9,7 @@ public class LibraryBookTracker {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
         // Map each book ID to its book title.
-        HashMap<Integer, String> books = new HashMap<>();
+        Map<Integer, String> books = new HashMap<>();
 
         // Read the number of books
         System.out.print("Enter the number of books: ");

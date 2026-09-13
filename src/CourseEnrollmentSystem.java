@@ -9,7 +9,7 @@ public class CourseEnrollmentSystem {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
         // Map each student ID to the student's course.
-        HashMap<Integer, String> enrollments = new HashMap<>();
+        Map<Integer, String> enrollments = new HashMap<>();
 
         // Read the number of students
         System.out.print("Enter the number of students: ");

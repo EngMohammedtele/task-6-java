@@ -9,7 +9,7 @@ public class EmployeeDirectoryMap {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
         // Map each employee ID to the employee's name.
-        HashMap<Integer, String> employees = new HashMap<>();
+        Map<Integer, String> employees = new HashMap<>();
 
         // Read the number of employees
         System.out.print("Enter the number of employees: ");
