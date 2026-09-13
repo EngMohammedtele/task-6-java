@@ -205,7 +205,7 @@ public class EmployeeSalaryManager {
                     }
 
                     // Calculate and store the highest salary.
-                    double highestSalary = Double.MIN_VALUE;
+                    double highestSalary = Double.NEGATIVE_INFINITY;
                     // Calculate and store the lowest salary.
                     double lowestSalary = Double.MAX_VALUE;
                     // Store the total payroll.
