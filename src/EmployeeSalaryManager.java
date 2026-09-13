@@ -39,7 +39,9 @@ public class EmployeeSalaryManager {
             double salary = scanner.nextDouble();
 
             // Check whether this condition is true.
-            if (salaries.containsKey(employeeId)) {
+            if (salary < 0) {
+                System.out.println("Salary cannot be negative. Record not added.");
+            } else if (salaries.containsKey(employeeId)) {
                 // Display information to the user.
                 System.out.println("Employee ID already exists. Record not added.");
             // Handle the other case.
@@ -96,10 +98,14 @@ public class EmployeeSalaryManager {
                         // Read the new salary from the user.
                         double newSalary = scanner.nextDouble();
 
-                        // Add a key and value to the salaries.
-                        salaries.put(newEmployeeId, newSalary);
-                        // Display information to the user.
-                        System.out.println("Employee added successfully.");
+                        if (newSalary < 0) {
+                            System.out.println("Salary cannot be negative. Employee not added.");
+                        } else {
+                            // Add a key and value to the salaries.
+                            salaries.put(newEmployeeId, newSalary);
+                            // Display information to the user.
+                            System.out.println("Employee added successfully.");
+                        }
                     }
                     // Leave this menu choice.
                     break;
@@ -139,10 +145,14 @@ public class EmployeeSalaryManager {
                         // Read the updated salary from the user.
                         double updatedSalary = scanner.nextDouble();
 
-                        // Replace a value in the salaries.
-                        salaries.replace(updateId, updatedSalary);
-                        // Display information to the user.
-                        System.out.println("Salary updated successfully.");
+                        if (updatedSalary < 0) {
+                            System.out.println("Salary cannot be negative. Salary not updated.");
+                        } else {
+                            // Replace a value in the salaries.
+                            salaries.replace(updateId, updatedSalary);
+                            // Display information to the user.
+                            System.out.println("Salary updated successfully.");
+                        }
                     // Handle the other case.
                     } else {
                         // Display information to the user.
