@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeSet;
@@ -9,8 +8,6 @@ public class CourseEnrollmentSystem {
     public static void main(String[] args) {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
-        // Create a HashSet to store unique student ids.
-        HashSet<Integer> studentIds = new HashSet<>();
         // Map each student ID to the student's course.
         HashMap<Integer, String> enrollments = new HashMap<>();
 
@@ -46,13 +43,11 @@ public class CourseEnrollmentSystem {
             String courseName = scanner.nextLine();
 
             // Check whether this condition is true.
-            if (studentIds.contains(studentId)) {
+            if (enrollments.containsKey(studentId)) {
                 // Display information to the user.
                 System.out.println("Student ID already exists. Record not added.");
             // Handle the other case.
             } else {
-                // Add an item to the student ids.
-                studentIds.add(studentId);
                 // Add a key and value to the enrollments.
                 enrollments.put(studentId, courseName);
             }
@@ -66,7 +61,7 @@ public class CourseEnrollmentSystem {
         scanner.nextLine();
 
         // Check whether this condition is true.
-        if (studentIds.contains(updateId)) {
+        if (enrollments.containsKey(updateId)) {
             // Display information to the user.
             System.out.print("Enter the new course name: ");
             // Read the new course from the user.
@@ -86,11 +81,11 @@ public class CourseEnrollmentSystem {
         String classification;
 
         // Check whether this condition is true.
-        if (studentIds.size() < 5) {
+        if (enrollments.size() < 5) {
             // Set the classification value.
             classification = "Small Enrollment";
         // Check the next condition.
-        } else if (studentIds.size() <= 15) {
+        } else if (enrollments.size() <= 15) {
             // Set the classification value.
             classification = "Medium Enrollment";
         // Handle the other case.
@@ -102,9 +97,9 @@ public class CourseEnrollmentSystem {
         // Display results
         System.out.println("\nTotal student records entered: " + numberOfStudents);
         // Display information to the user.
-        System.out.println("Total unique students: " + studentIds.size());
+        System.out.println("Total unique students: " + enrollments.size());
         // Display information to the user.
-        System.out.println("All student IDs: " + studentIds);
+        System.out.println("All student IDs: " + enrollments.keySet());
         // Display information to the user.
         System.out.println("All student IDs with enrolled courses:");
 
