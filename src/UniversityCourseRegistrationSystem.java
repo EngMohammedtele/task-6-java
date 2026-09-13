@@ -55,6 +55,11 @@ class UniversityCourseRegistrationSystem {
             // Clear the remaining new line from the input.
             scanner.nextLine();
 
+            if (numberOfCourses < 0) {
+                System.out.println("Number of courses cannot be negative. Record skipped.");
+                continue;
+            }
+
             // Create a HashSet to store unique courses.
             Set<String> courses = new HashSet<>();
 
