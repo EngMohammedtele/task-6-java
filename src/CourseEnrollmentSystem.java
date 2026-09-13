@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeSet;
 // This class runs the course enrollment system program.
@@ -99,14 +98,14 @@ public class CourseEnrollmentSystem {
         // Display information to the user.
         System.out.println("Total unique students: " + enrollments.size());
         // Display information to the user.
-        System.out.println("All student IDs: " + enrollments.keySet());
+        System.out.println("All student IDs: " + new TreeSet<>(enrollments.keySet()));
         // Display information to the user.
         System.out.println("All student IDs with enrolled courses:");
 
         // Go through each item in the collection.
-        for (Map.Entry<Integer, String> entry : enrollments.entrySet()) {
+        for (int studentId : new TreeSet<>(enrollments.keySet())) {
             // Display information to the user.
-            System.out.println(entry.getKey() + " -> " + entry.getValue());
+            System.out.println(studentId + " -> " + enrollments.get(studentId));
         }
 
         // Display information to the user.
