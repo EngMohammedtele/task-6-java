@@ -43,7 +43,9 @@ public class ProductPriceCatalog {
             scanner.nextLine();
 
             // Check whether this condition is true.
-            if (products.containsKey(productName)) {
+            if (price < 0) {
+                System.out.println("Price cannot be negative. Record not added.");
+            } else if (products.containsKey(productName)) {
                 // Display information to the user.
                 System.out.println("Product already exists. Record not added.");
             // Handle the other case.
@@ -75,10 +77,14 @@ public class ProductPriceCatalog {
                 // Read the new price from the user.
                 double newPrice = scanner.nextDouble();
 
-                // Replace a value in the products.
-                products.replace(searchProduct, newPrice);
-                // Display information to the user.
-                System.out.println("Price updated successfully.");
+                if (newPrice < 0) {
+                    System.out.println("Price cannot be negative. Price not updated.");
+                } else {
+                    // Replace a value in the products.
+                    products.replace(searchProduct, newPrice);
+                    // Display information to the user.
+                    System.out.println("Price updated successfully.");
+                }
             }
         // Handle the other case.
         } else {
