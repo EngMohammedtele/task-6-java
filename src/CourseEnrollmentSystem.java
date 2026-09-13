@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeSet;
 // This class runs the course enrollment system program.
