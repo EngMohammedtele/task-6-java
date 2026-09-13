@@ -39,7 +39,9 @@ public class StudentGradesMap {
             double grade = scanner.nextDouble();
 
             // Check whether this condition is true.
-            if (grades.containsKey(studentId)) {
+            if (grade < 0 || grade > 100) {
+                System.out.println("Grade must be between 0 and 100. Record not added.");
+            } else if (grades.containsKey(studentId)) {
                 // Display information to the user.
                 System.out.println("Student ID already exists. Record not added.");
             // Handle the other case.
@@ -61,10 +63,14 @@ public class StudentGradesMap {
             // Read the new grade from the user.
             double newGrade = scanner.nextDouble();
 
-            // Replace a value in the grades.
-            grades.replace(updateId, newGrade);
-            // Display information to the user.
-            System.out.println("Grade updated successfully.");
+            if (newGrade < 0 || newGrade > 100) {
+                System.out.println("Grade must be between 0 and 100. Grade not updated.");
+            } else {
+                // Replace a value in the grades.
+                grades.replace(updateId, newGrade);
+                // Display information to the user.
+                System.out.println("Grade updated successfully.");
+            }
         // Handle the other case.
         } else {
             // Display information to the user.
