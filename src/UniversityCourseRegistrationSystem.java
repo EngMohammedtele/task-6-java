@@ -151,8 +151,6 @@ class UniversityCourseRegistrationSystem {
 
                         // Check whether this condition is true.
                         if (studentCourses.add(courseToAdd)) {
-                            // Replace a value in the registrations.
-                            registrations.replace(addStudentId, studentCourses);
                             // Display information to the user.
                             System.out.println("Course added successfully.");
                         // Handle the other case.
@@ -192,8 +190,6 @@ class UniversityCourseRegistrationSystem {
 
                         // Check whether this condition is true.
                         if (studentCourses.remove(courseToRemove)) {
-                            // Replace a value in the registrations.
-                            registrations.replace(removeStudentId, studentCourses);
                             // Display information to the user.
                             System.out.println("Course removed successfully.");
                         // Handle the other case.
