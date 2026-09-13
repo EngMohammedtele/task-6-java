@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -9,8 +8,6 @@ public class LibraryBookTracker {
     public static void main(String[] args) {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
-        // Create a HashSet to store unique book ids.
-        HashSet<Integer> bookIds = new HashSet<>();
         // Map each book ID to its book title.
         HashMap<Integer, String> books = new HashMap<>();
 
@@ -46,13 +43,11 @@ public class LibraryBookTracker {
             String bookTitle = scanner.nextLine();
 
             // Check whether this condition is true.
-            if (bookIds.contains(bookId)) {
+            if (books.containsKey(bookId)) {
                 // Display information to the user.
                 System.out.println("Duplicate Book ID. Record not added.");
             // Handle the other case.
             } else {
-                // Add an item to the book ids.
-                bookIds.add(bookId);
                 // Add a key and value to the books.
                 books.put(bookId, bookTitle);
             }
@@ -79,11 +74,11 @@ public class LibraryBookTracker {
         String classification;
 
         // Check whether this condition is true.
-        if (bookIds.size() < 5) {
+        if (books.size() < 5) {
             // Set the classification value.
             classification = "Small Library";
         // Check the next condition.
-        } else if (bookIds.size() <= 10) {
+        } else if (books.size() <= 10) {
             // Set the classification value.
             classification = "Medium Library";
         // Handle the other case.
@@ -95,9 +90,9 @@ public class LibraryBookTracker {
         // Display results
         System.out.println("\nTotal book records entered: " + numberOfBooks);
         // Display information to the user.
-        System.out.println("Total unique books: " + bookIds.size());
+        System.out.println("Total unique books: " + books.size());
         // Display information to the user.
-        System.out.println("All book IDs: " + bookIds);
+        System.out.println("All book IDs: " + books.keySet());
         // Display information to the user.
         System.out.println("All book IDs with titles:");
 
