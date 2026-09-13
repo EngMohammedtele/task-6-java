@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeSet;
 
 // This class runs the university course registration system program.
@@ -11,7 +12,7 @@ class UniversityCourseRegistrationSystem {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
         // Map each student ID to a set of registered courses.
-        HashMap<Integer, HashSet<String>> registrations = new HashMap<>();
+        Map<Integer, Set<String>> registrations = new HashMap<>();
 
         // Read the initial number of students
         System.out.print("Enter the number of students: ");
@@ -55,7 +56,7 @@ class UniversityCourseRegistrationSystem {
             scanner.nextLine();
 
             // Create a HashSet to store unique courses.
-            HashSet<String> courses = new HashSet<>();
+            Set<String> courses = new HashSet<>();
 
             // Repeat the loop for the required number of times.
             for (int j = 1; j <= numberOfCourses; j++) {
@@ -146,7 +147,7 @@ class UniversityCourseRegistrationSystem {
                         String courseToAdd = scanner.nextLine();
 
                         // Store the student courses from the collection.
-                        HashSet<String> studentCourses =
+                        Set<String> studentCourses =
                                 registrations.get(addStudentId);
 
                         // Check whether this condition is true.
@@ -185,7 +186,7 @@ class UniversityCourseRegistrationSystem {
                         String courseToRemove = scanner.nextLine();
 
                         // Store the student courses from the collection.
-                        HashSet<String> studentCourses =
+                        Set<String> studentCourses =
                                 registrations.get(removeStudentId);
 
                         // Check whether this condition is true.
@@ -239,7 +240,7 @@ class UniversityCourseRegistrationSystem {
                     int lowestCourses = Integer.MAX_VALUE;
 
                     // Repeat the loop for the required number of times.
-                    for (Map.Entry<Integer, HashSet<String>> entry
+                    for (Map.Entry<Integer, Set<String>> entry
                             : registrations.entrySet()) {
                         // Calculate and store the course count.
                         int courseCount = entry.getValue().size();
