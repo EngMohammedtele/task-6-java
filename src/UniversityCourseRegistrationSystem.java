@@ -10,8 +10,6 @@ class UniversityCourseRegistrationSystem {
     public static void main(String[] args) {
         // Create a Scanner to read user input.
         Scanner scanner = new Scanner(System.in);
-        // Create a HashSet to store unique student ids.
-        HashSet<Integer> studentIds = new HashSet<>();
         // Map each student ID to a set of registered courses.
         HashMap<Integer, HashSet<String>> registrations = new HashMap<>();
 
@@ -40,7 +38,7 @@ class UniversityCourseRegistrationSystem {
             int studentId = scanner.nextInt();
 
             // Check whether this condition is true.
-            if (studentIds.contains(studentId)) {
+            if (registrations.containsKey(studentId)) {
                 // Display information to the user.
                 System.out.println("Student ID already exists. Record skipped.");
                 // Clear the remaining new line from the input.
@@ -48,9 +46,6 @@ class UniversityCourseRegistrationSystem {
                 // Skip this record and continue the loop.
                 continue;
             }
-
-            // Add an item to the student ids.
-            studentIds.add(studentId);
 
             // Display information to the user.
             System.out.print("Enter the number of courses: ");
