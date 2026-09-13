@@ -39,7 +39,9 @@ public class StudentAttendanceManager {
             int attendedDays = scanner.nextInt();
 
             // Check whether this condition is true.
-            if (attendance.containsKey(studentId)) {
+            if (attendedDays < 0) {
+                System.out.println("Attended days cannot be negative. Record not added.");
+            } else if (attendance.containsKey(studentId)) {
                 // Display information to the user.
                 System.out.println("Student ID already exists. Record not added.");
             // Handle the other case.
@@ -96,10 +98,14 @@ public class StudentAttendanceManager {
                         // Read the new attendance from the user.
                         int newAttendance = scanner.nextInt();
 
-                        // Add a key and value to the attendance.
-                        attendance.put(newStudentId, newAttendance);
-                        // Display information to the user.
-                        System.out.println("Student record added successfully.");
+                        if (newAttendance < 0) {
+                            System.out.println("Attended days cannot be negative. Record not added.");
+                        } else {
+                            // Add a key and value to the attendance.
+                            attendance.put(newStudentId, newAttendance);
+                            // Display information to the user.
+                            System.out.println("Student record added successfully.");
+                        }
                     }
                     // Leave this menu choice.
                     break;
@@ -139,10 +145,14 @@ public class StudentAttendanceManager {
                         // Read the updated attendance from the user.
                         int updatedAttendance = scanner.nextInt();
 
-                        // Replace a value in the attendance.
-                        attendance.replace(updateId, updatedAttendance);
-                        // Display information to the user.
-                        System.out.println("Attendance updated successfully.");
+                        if (updatedAttendance < 0) {
+                            System.out.println("Attended days cannot be negative. Attendance not updated.");
+                        } else {
+                            // Replace a value in the attendance.
+                            attendance.replace(updateId, updatedAttendance);
+                            // Display information to the user.
+                            System.out.println("Attendance updated successfully.");
+                        }
                     // Handle the other case.
                     } else {
                         // Display information to the user.
